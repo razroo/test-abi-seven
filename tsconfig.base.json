@@ -20,6 +20,9 @@
     "paths": {
       "@test-abi-seven/common/styles": [
         "libs/common/styles/src/index.ts"
+      ],
+      "@test-abi-seven/common/ui": [
+        "libs/common/ui/src/index.ts"
       ]
     }
   },
