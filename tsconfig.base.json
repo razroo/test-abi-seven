@@ -23,6 +23,9 @@
       ],
       "@test-abi-seven/common/ui": [
         "libs/common/ui/src/index.ts"
+      ],
+      "@test-abi-seven/home": [
+        "libs/home/src/index.ts"
       ]
     }
   },
