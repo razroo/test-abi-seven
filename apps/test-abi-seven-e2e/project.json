@@ -1,0 +1,29 @@
+{
+  "name": "test-abi-seven-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/test-abi-seven-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/test-abi-seven-e2e/cypress.json",
+        "devServerTarget": "test-abi-seven:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "test-abi-seven:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/test-abi-seven-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["test-abi-seven"]
+}
