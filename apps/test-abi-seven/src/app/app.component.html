@@ -1,5 +1,19 @@
 <test-abi-seven-global-header></test-abi-seven-global-header>
 <div class="wrapper">
-  <div class="container"></div>
+  <div class="container">
+    <test-abi-seven-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav>
+        <a
+          mat-list-item
+          routerLinkActive="active-link"
+          routerLink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </test-abi-seven-global-sidenav>
+  </div>
 </div>
 <test-abi-seven-global-footer> </test-abi-seven-global-footer>
